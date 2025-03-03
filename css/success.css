@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sawarabi+Mincho&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background-image: url(img/success/bg-success.png);
+    background-color: #1B1B1B;
+    background-size: cover;
+    display: flex;
+}
+
+.content {
+    width: 60%;
+    margin: 230px auto 0px;
+}
+
+.head-text {
+    display: flex;
+    gap: 20px;
+}
+
+.head-text-h2 p {
+    font-size: 90px;
+}
+
+.head-text-p p {
+    color: #818181;
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+.head-text-h2 span {
+    color: #446C36;
+}
+
+.timer{
+    margin: 350px auto 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-timer_time{
+    display: flex;
+    gap: 5px;
+}

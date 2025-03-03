@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body{
+  background-color: #494949;
+  background-image: url(img/bg-linear-1.png);
+  background-size: cover;
+  padding: 100px 70px;
+  overflow-y: hidden;
+}
+
+img{
+  pointer-events: none;
+}
+
+.center-block{
+  background-image: url(img/bg-slider-auto.png);
+  background-size: cover;
+  border-radius: 27px;
+}
+
+.text-center-block{
+  padding: 160px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.head-text-text{
+  color: #ffffff;
+  font-size: 90px;
+}
+
+.body-text-text{
+  color: #9F9F9F;
+  font-size: 35px;
+  width: 68%;
+}
+
+.body-text-text span{
+  color: #fff;
+  font-weight: 600;
+}
+
+.button-text-button{
+  width: 280px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 17px;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-top: 70px;
+  font-size: 18px;
+}
+
+.button-text-button:hover{
+  transform: scale(1.025);
+  opacity: 80%;
+}
+
+.logo-block{
+  padding: 30px 40px;
+}
+
+.logo-block img{
+  width: 230px;
+  opacity: 50%;
+}
+
+.img-car{
+  position: absolute;
+  right: 10px;
+  top: 500px;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 50px;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1B1B1B;
+}
+
+.container {
+    max-width: 1703px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+input, textarea{
+    outline: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+.pre-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 3;
+    transition: 0.7s;
+    visibility: visible;
+}
+
+.pre-loader_loading{
+    width: 100px;
+    height: 100px;
+    border: 15px solid white;
+    border-bottom: 15px solid #000000;
+    border-radius: 50%;
+    margin: 380px auto;
+    animation: loading 1.25s infinite linear;
+}
+
+.hide{
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.button {
+    width: 165px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 9px;
+    border: none;
+    box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.button:hover {
+    background-color: #bdbcbc;
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 50px 100px;
+    background-image: url(img/bg-linear-2.png);
+    background-repeat: space;
+}
+
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll-up {
+    border-radius: 50%;
+    background-color: #9F9F9F;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    opacity: 70%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+.scroll-up:hover {
+    background-color: #cac8c8;
+    transform: scale(1.1);
+}
+
+.scroll-up img {
+    margin: 19px;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav {
+    margin-top: 12px;
+    display: flex;
+    gap: 70px;
+    color: #B6B6B6;
+    font-family: 'PT Sans regular';
+}
+
+nav a {
+    color: #B6B6B6;
+}
+
+nav a:hover{
+    opacity: 50%;
+}
+
+.phone_button {
+    display: flex;
+    gap: 30px;
+}
+
+.phone {
+    margin-top: 15px;
+    margin-right: 4px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.language_select {
+    margin-top: 15px;
+    color: #FFFFFF;
+}
+
+.language_select::before {
+    content: url(img/arrow_button.svg);
+    position: absolute;
+    z-index: 1;
+    right: 323px;
+    top: 62px;
+}
+
+.bottom-header {
+    margin-top: 55px;
+    width: 100%;
+    border-radius: 41px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.text_bottom-header {
+    display: flex;
+    flex-direction: column;
+    padding: 119px 40px 183px 150px;
+    gap: 45px;
+}
+
+.heading-text_bottom-header {
+    font-size: 57px;
+    width: 800px;
+    line-height: 140%;
+}
+
+.body-text_bottom-header {
+    font-size: 25px;
+    width: 400px;
+}
+
+.booking {
+    width: 250px;
+    height: 65px;
+    border: none;
+    border-radius: 9px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.booking:hover {
+    background-color: #444343;
+    transform: scale(1.05);
+}
+
+.img-car_bottom-header {
+    position: absolute;
+    z-index: 1;
+    right: -5%;
+    top: 220px;
+}
+
+.img-car_bottom-header img{
+    transition: 0.5s;
+}
+
+.offer-servise {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    margin-bottom: 180px;
+}
+
+.our-offer {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 175px;
+}
+
+.h2_our-offer,
+.h2_our-service {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.p_our-offer,
+.p_our-service {
+    color: #9F9F9F;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.block_our-offer {
+    background-color: #333333;
+    border-radius: 27px;
+    display: flex;
+    padding: 48px 50px;
+}
+
+.p_block-our-offer p {
+    margin: 0px 0px 30px 50px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.our-service {
+    width: 1400px;
+}
+
+.card-wrapper_our-service {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card_our-service {
+    background-color: #333333;
+    border-radius: 20px;
+}
+
+.img_card_our-service {
+    width: 260px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+#card-1 {
+    background-image: url(img/card1.png);
+}
+
+#card-2 {
+    background-image: url(img/card2.png);
+}
+
+#card-3 {
+    background-image: url(img/card3.png);
+}
+
+#card-4 {
+    background-image: url(img/card4.png);
+}
+
+.card_our-service-sub {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.h2_card_our-service {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.p_card_our-service {
+    width: 270px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#button1 {
+    margin-top: 60px;
+}
+
+#button2 {
+    margin-top: 40px;
+}
+
+.our-autopark {
+    margin-top: 100px;
+}
+
+.head-text_our-autopark {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.h2-head-text_our-autopark {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.p-head-text_our-autopark {
+    color: #9F9F9F;
+    font-size: 20px;
+    margin-bottom: 3px;
+    margin-bottom: 23px;
+}
+
+.slider-wrapper_our-autopark {
+    border-radius: 27px;
+    background-image: url(img/bg-slider-auto.png);
+    background-size: cover;
+    margin-bottom: 250px;
+}
+
+.slider-wrapper_our-autopark-name_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-wrapper_our-autopark-text {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+.slider-wrapper_our-autopark-name h2 {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+.slider-wrapper_our-autopark-price h2 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.slider-wrapper_our-autopark-price span {
+    font-size: 30px;
+    color: #A7A7A7;
+    font-weight: 100;
+}
+
+.slider-wrapper_our-autopark-more {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slider-wrapper_our-autopark_more-passenger,
+.slider-wrapper_our-autopark_more-transmission {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+.slider-wrapper_our-autopark_passenger_transmission {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slider-wrapper_our-autopark_more-select-button {
+    width: 230px;
+    height: 60px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.slider-wrapper_our-autopark_more-select-button:hover {
+    box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.slider-wrapper_our-autopark-more_image-car {
+    position: relative;
+    display: flex;
+}
+
+.slider-wrapper_our-autopark_image-car {
+    position: absolute;
+    z-index: 1;
+    right: 3rem;
+}
+
+.swipe-block_our-autopark {
+    margin-top: 270px;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#swipe-block_text_card1 p {
+    margin-top: 62px;
+}
+
+#swipe-block_text_card3 p {
+    margin-top: 62px;
+}
+
+.swipe-block_our-autopark_arrow {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.swipe-block_left-arrow,
+.swipe-block_right-arrow {
+    cursor: pointer;
+}
+
+.swipe-block_card-area {
+    width: 100%;
+    background-color: #2B2B2B;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.swipe-block_card {
+    border-radius: 20px;
+    background-color: #333333;
+    width: 450px;
+    height: 340px;
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.swipe-block_card:focus {
+    background-color: #494949;
+}
+
+.swipe-block_card_picture {
+    margin: 25px 0 25px 0px;
+}
+
+.swipe-block_card_text p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+
+#swipe-block_card_picture-3 {
+    margin: 45px 0px 0px 30px;
+}
+
+.place-companies {
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-top: 130px;
+}
+
+.wrapper-companies {
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+    padding: 80px 0px;
+}
+
+.companies {
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.companies:hover {
+    transform: scale(1.10);
+    opacity: 70%;
+}
+
+.h2-choise {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.h2-choise span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.p-choise {
+    color: #818181;
+    font-size: 20px;
+    margin-bottom: 40px;
+    width: 400px;
+}
+
+.choise-contact {
+    margin: 225px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.us-choise {
+    width: 1510px;
+}
+
+.wrapper_choise-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-wrapper-one_choise-card,
+.sub-wrapper-two_choise-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card-choise {
+    background-color: #333333;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    width: 670px;
+    gap: 50px;
+}
+
+.card-choise-h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.card-choise-p {
+    color: #ffffff;
+}
+
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    width: 1510px;
+    margin-top: 225px;
+}
+
+.contact-us-h2 {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-us-p {
+    color: #818181;
+    font-size: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.input-area_contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 730px;
+}
+
+.input-area_contact-us input,
+.input-area_contact-us textarea {
+    color: #9c9c9c;
+    border: none;
+    background-color: #3a3a3a;
+    border-radius: 9px;
+    padding: 20px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.input-area_contact-us textarea {
+    max-width: 730px;
+    max-height: 240px;
+}
+
+.input-area_contact-us input:focus,
+.input-area_contact-us textarea:focus {
+    background-color: #444343;
+    border: none;
+}
+
+.contact-us_checkbox-button {
+    display: flex;
+    margin-top: 30px;
+}
+
+.checbox-label {
+    color: #FFFFFF;
+    width: 566px;
+}
+
+.contact-us_right-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+footer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-center {
+    width: 80%;
+    margin-top: 65px;
+}
+
+.footer-center-head_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right_block {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+}
+
+.footer-left-block-h2 {
+    font-size: 23px;
+}
+
+.footer-left-block-p {
+    font-size: 20px;
+    color: #6B6B6B;
+}
+
+.footer-left_block-input-button input {
+    background-color: #F0F0F0;
+    border-radius: 9px;
+    border: none;
+    padding: 30px;
+    width: 675px;
+    font-size: 16px;
+    transition: 0.7s;
+}
+
+.footer-left_block-input-button input:focus{
+    background-color: #d8d7d7;
+}
+
+.footer-left_block-button {
+    background-color: #0E0E0E;
+    color: #ffffff;
+    height: 65px;
+    margin-left: -185px;
+}
+
+.footer-left_block-button:hover {
+    background-color: #3d3d3d;
+}
+
+.law-footer {
+    text-align: right;
+}
+
+.law-footer a {
+    color: #000000;
+}
+
+.footer-center_down-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.footer-center_card-img img {
+    margin-bottom: 10px;
+    width: 30px;
+}
+
+.footer-center_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    margin: 120px 0px 15px 0px;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.subscribe_text{
+    margin-top: 10px;
+}
+
+.correct{
+    color: #7ac142;
+}
+
+.incorrect{
+    color: red;
+}
+
+.visible{
+    background-color: #5a5a5a;
+}
+
+@media screen and (max-width: 1700px){
+    .heading-text_bottom-header{
+        width: auto;
+        font-size: 75px;
+    }
+    .booking{
+        width: 300px;
+        height: 84px;
+    }
+    .img-car_bottom-header{
+        right: 50px;
+        top: 400px;
+    }
+    .img-car_bottom-header img{
+        width: 900px;
+    }
+    .slider-wrapper_our-autopark-text{
+        width: auto;
+    }
+    .slider-wrapper_our-autopark-name_price{
+        margin: 0px 20px;
+    }
+    .slider-wrapper_our-autopark-more{
+        margin: 0px 20px;
+    }
+    .slider-wrapper_our-autopark_image-car{
+        right: 150px;
+    }
+    .slider-wrapper_our-autopark_more-select-button{
+        margin: 0px 20px;
+    }
+    .swipe-block_our-autopark{
+        width: auto;
+    }
+    .swipe-block_card{
+        width: auto;
+    }
+    .place-companies{
+        overflow: hidden;
+    }
+    .us-choise{
+        width: auto;
+    }
+    .wrapper_choise-card{
+        gap: 20px;
+    }
+    .card-choise{
+        width: 600px;
+    }
+    .contact-us{
+        width: 1420px;
+    }
+}
